@@ -1,0 +1,46 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compiler les 3 versions Snake",
+            "type": "shell",
+            "command": "g++",
+            "args": ["-Wall", "-std=c++17", "${workspaceFolder}/snake_v1.cpp", "-o", "${workspaceFolder}/snake_v1.exe"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": "$gcc",
+            "dependsOn": ["Compiler V2", "Compiler V3"]
+        },
+        {
+            "label": "Compiler V2",
+            "type": "shell",
+            "command": "g++",
+            "args": ["-Wall", "-std=c++17", "${workspaceFolder}/snake_v2.cpp", "-o", "${workspaceFolder}/snake_v2.exe"],
+            "problemMatcher": "$gcc",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Compiler V3",
+            "type": "shell",
+            "command": "g++",
+            "args": ["-Wall", "-std=c++17", "${workspaceFolder}/snake_v3.cpp", "-o", "${workspaceFolder}/snake_v3.exe"],
+            "problemMatcher": "$gcc",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "shared"
+            }
+        }
+    ]
+}
